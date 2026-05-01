@@ -4,28 +4,39 @@
             "id": 1,
             "title": "Yugurish",
             "description": "ertalab 6:00 da 3 km yugurish",
-            "status": false
+            "status": false,
+            "user_id": 1
         },
         {
             "id": 2,
             "title": "Kitob oqish",
             "description": "ertalab 7:00 da 30 minute kitob oqish",
-            "status": true
+            "status": true,
+            "user_id": 1
         },
         {
             "id": 3,
             "title": "Study",
             "description": "9:00 da oqishga ketishim kerak",
-            "status": false
+            "status": false,
+            "user_id": 2
         },
         {
             "id": 7,
             "title": "Work",
             "description": "ertalab 10 da ishda bolishim kerak",
-            "status": false
+            "status": false,
+            "user_id": 1
+        },
+        {
+            "id": 8,
+            "title": "test task",
+            "description": "test",
+            "status": false,
+            "user_id": 2
         }
     ],
-    "current_id": 8,
+    "current_id": 9,
     "users": [
         {
             "id": 1,

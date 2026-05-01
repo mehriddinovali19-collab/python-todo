@@ -34,19 +34,19 @@ def main() -> None:
 
             option = input("> ")
             if option == "1":
-                handle_add_task()
+                handle_add_task(current_user)
             elif option == "2":
-                handle_show_tasks()
+                handle_show_tasks(current_user)
             elif option == "3":
-                handle_show_task_detail()
+                handle_show_task_detail(current_user)
             elif option == "4":
-                handle_mark_as_comleted()
+                handle_mark_as_comleted(current_user)
             elif option == "5":
-                handle_mark_as_incomleted()
+                handle_mark_as_incomleted(current_user)
             elif option == "6":
-                handle_delete_task()
+                handle_delete_task(current_user)
             elif option == "7":
-                handle_search_task()
+                handle_search_task(current_user)
             elif option == "8":
                 current_user = None
             elif option == "0":

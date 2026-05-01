@@ -14,7 +14,7 @@ def write_file(tasks: list[dict]):
     f.write(content)
 
 
-def add_task(title: str, description: str):
+def add_task(title: str, description: str, user_id: int):
     data = read_file()
     data["tasks"].append(
         {
@@ -22,36 +22,37 @@ def add_task(title: str, description: str):
             "title": title,
             "description": description,
             "status": False,
+            "user_id": user_id,
         }
     )
     data["current_id"] += 1
     write_file(data)
 
 
-def mark_task_as_completed(id: int):
+def mark_task_as_completed(id: int, user_id: int):
     data = read_file()
     for task in data["tasks"]:
-        if task["id"] == id:
+        if task["user_id"] == user_id and task["id"] == id:
             task["status"] = True
             write_file(data)
             return True
     return False
 
 
-def mark_task_as_incompleted(id: int):
+def mark_task_as_incompleted(id: int, user_id: int):
     data = read_file()
     for task in data["tasks"]:
-        if task["id"] == id:
+        if task["user_id"] == user_id and task["id"] == id:
             task["status"] = False
             write_file(data)
             return True
     return False
 
 
-def delete_task(id: int):
+def delete_task(id: int, user_id: int):
     data = read_file()
     for task in data["tasks"]:
-        if task["id"] == id:
+        if task["user_id"] == user_id and task["id"] == id:
             data["tasks"].remove(task)
             write_file(data)
             return True
