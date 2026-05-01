@@ -10,7 +10,7 @@
             "id": 2,
             "title": "Kitob oqish",
             "description": "ertalab 7:00 da 30 minute kitob oqish",
-            "status": false
+            "status": true
         },
         {
             "id": 3,
@@ -19,17 +19,11 @@
             "status": false
         },
         {
-            "id": 4,
-            "title": "test",
-            "description": "test",
-            "status": false
-        },
-        {
-            "id": 5,
-            "title": "test 2",
-            "description": "test 2",
+            "id": 7,
+            "title": "Work",
+            "description": "ertalab 10 da ishda bolishim kerak",
             "status": false
         }
     ],
-    "current_id": 6
+    "current_id": 8
 }

@@ -28,16 +28,34 @@ def add_task(title: str, description: str):
     write_file(data)
 
 
-def mark_task_as_completed():
-    pass
+def mark_task_as_completed(id: int):
+    data = read_file()
+    for task in data["tasks"]:
+        if task["id"] == id:
+            task["status"] = True
+            write_file(data)
+            return True
+    return False
 
 
-def mark_task_as_incompleted():
-    pass
+def mark_task_as_incompleted(id: int):
+    data = read_file()
+    for task in data["tasks"]:
+        if task["id"] == id:
+            task["status"] = False
+            write_file(data)
+            return True
+    return False
 
 
-def delete_task():
-    pass
+def delete_task(id: int):
+    data = read_file()
+    for task in data["tasks"]:
+        if task["id"] == id:
+            data["tasks"].remove(task)
+            write_file(data)
+            return True
+    return False
 
 
 def get_all_tasks():
